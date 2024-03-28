@@ -11,7 +11,9 @@ base = declarative_base()
 #for use crud must use session
 # sessionmaker pass function and must call it!!!!!!!!!
 # session = sessionmaker(bind=engine, autocommit=True)()
-session = sessionmaker(bind=engine)()
+# session = sessionmaker(bind=engine)()
+Session = sessionmaker(bind=engine)
+session = Session()
 class Student(base):
     __tablename__ = 'student'
     _id = Column('id', Integer, unique=True, primary_key=True)
