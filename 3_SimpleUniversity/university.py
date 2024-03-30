@@ -29,4 +29,4 @@ class DB:
     class Role(SubClass, _base):
         __tablename__ = 'role'
         name = Column('name', String(50))
-        users = relationship('Person', backref='role')
+        persons = relationship('Person', backref='role')
